@@ -200,10 +200,34 @@ body{
     </a>
     <a href="https://facebook.com/tuusuario" target="_blank">
         <i class="fa-brands fa-facebook-f"></i>
-    </a>
-    <a href="https://www.tiktok.com/@mini.closet.2e" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.tiktok.com/@mini.closet.2e" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   onclick="abrirTikTok(event, 'mini.closet.2e')">
     <i class="fa-brands fa-tiktok"></i>
 </a>
+
+<script>
+function abrirTikTok(event, usuario) {
+    const esMobil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+    if (esMobil) {
+        event.preventDefault();
+        
+        // Deep link para abrir la app nativa
+        const appLink = `tiktok://user?username=${usuario}`;
+        const webLink = `https://www.tiktok.com/@${usuario}`;
+        
+        // Intenta abrir la app
+        window.location.href = appLink;
+        
+        // Si no abre la app en 1.5s, redirige al navegador
+        setTimeout(() => {
+            window.location.href = webLink;
+        }, 1500);
+    }
+}
+</script>
 </div>
 </div>
 
