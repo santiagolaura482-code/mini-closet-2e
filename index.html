@@ -198,30 +198,9 @@ body{
     <a href="https://instagram.com/minicloset2e" target="_blank">
         <i class="fa-brands fa-instagram"></i>
     </a>
-   <a href="https://www.facebook.com/Jhoselyn.vilca" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   onclick="abrirFacebook(event, 'Jhoselyn.vilca')">
-    <i class="fa-brands fa-facebook-f"></i>
-</a>
-
-<script>
-function abrirFacebook(event, usuario) {
-    const esMobil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    
-    if (esMobil) {
-        event.preventDefault();
-        
-        const appLink = `fb://profile/${usuario}`;
-        const webLink = `https://www.facebook.com/${usuario}`;
-        
-        window.location.href = appLink;
-        
-        setTimeout(() => {
-            window.location.href = webLink;
-        }, 1500);
-    }
-}
+    <a href="https://www.facebook.com/Jhoselynvilca" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
     <a href="https://www.tiktok.com/@mini.closet.2e" 
    target="_blank" 
    rel="noopener noreferrer"
